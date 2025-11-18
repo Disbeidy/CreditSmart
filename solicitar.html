@@ -12,13 +12,13 @@
   <nav class="navbar">
     <div class="container">
       <h1 class="logo">
-        <img src="Img/Logo cerdito.ico" alt="Logo cerdito" width="40" style="vertical-align: middle; margin-right: 8px;" />
+        <img src="Img/Logo cerdito.ico" alt="Logo cerdito" width="80" style="vertical-align: middle; margin-right: 8px;" />
         CreditSmart
       </h1>
       <ul class="menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="simulador.html">Simulador</a></li>
-        <li><a href="solicitar.html">Solicitar Crédito</a></li>
+        <li><a href="solicitar.html" aria-current="page">Solicitar Crédito</a></li>
       </ul>
     </div>
   </nav>
@@ -27,26 +27,25 @@
   <header class="hero">
     <div class="container">
       <h2>Formulario de Solicitud</h2>
-      <p>Completa los datos para solicitar tu crédito en línea.</p>
+      <p>Completa los datos para iniciar tu solicitud de crédito.</p>
     </div>
   </header>
 
   <!-- FORMULARIO -->
   <main class="container">
-    <form class="formulario-solicitud">
+    <form class="credit-form">
 
       <!-- DATOS PERSONALES -->
       <fieldset>
         <legend>Datos Personales</legend>
-
         <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ej: Disbeidy Anzueta" required />
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Disbeidy Anzueta Gongora" required />
 
         <label for="cedula">Cédula:</label>
-        <input type="number" id="cedula" name="cedula" placeholder="Ej: 1006449853" required />
+        <input type="text" id="cedula" name="cedula" placeholder="Ej: 1006449872" required />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Ej: ejemplo@correo.com" required />
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Ej: disbeidyanzueta@gmail.com" required />
 
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3204615438" required />
@@ -55,63 +54,72 @@
       <!-- DATOS DEL CRÉDITO -->
       <fieldset>
         <legend>Datos del Crédito</legend>
-
         <label for="tipo">Tipo de crédito:</label>
         <select id="tipo" name="tipo" required>
-          <option value="">Seleccione un tipo de crédito</option>
-          <option value="libre">Crédito Libre Inversión</option>
-          <option value="vehiculo">Crédito Vehículo</option>
-          <option value="vivienda">Crédito Vivienda</option>
-          <option value="educativo">Crédito Educativo</option>
-          <option value="empresarial">Crédito Empresarial</option>
-          <option value="ahorro">Crédito Ahorro Programado</option>
+          <option value="">Seleccione una opción</option>
+          <option>Crédito Libre Inversión</option>
+          <option>Crédito Vehículo</option>
+          <option>Crédito Vivienda</option>
+          <option>Crédito Educativo</option>
+          <option>Crédito Empresarial</option>
+          <option>Crédito Personal</option>
         </select>
 
         <label for="monto">Monto solicitado:</label>
-        <input type="number" id="monto" name="monto" placeholder="Ej: 5000000" required />
+        <input type="number" id="monto" name="monto" placeholder="Ej: 15000000" required />
 
         <label for="plazo">Plazo en meses:</label>
         <select id="plazo" name="plazo" required>
-          <option value="">Seleccione plazo</option>
-          <option value="12">12 meses</option>
-          <option value="24">24 meses</option>
-          <option value="36">36 meses</option>
-          <option value="48">48 meses</option>
-          <option value="60">60 meses</option>
+          <option value="">Seleccione</option>
+          <option>12</option>
+          <option>24</option>
+          <option>36</option>
+          <option>48</option>
+          <option>60</option>
         </select>
 
         <label for="destino">Destino del crédito:</label>
-        <textarea id="destino" name="destino" rows="3" placeholder="Ej: Compra de computador portátil" required></textarea>
+        <textarea id="destino" name="destino" rows="3" placeholder="Ej: Remodelación de vivienda" required></textarea>
       </fieldset>
 
       <!-- DATOS LABORALES -->
       <fieldset>
         <legend>Datos Laborales</legend>
-
         <label for="empresa">Empresa donde trabaja:</label>
-        <input type="text" id="empresa" name="empresa" placeholder="Ej: Ingeniería Web S.A.S" required />
+        <input type="text" id="empresa" name="empresa" placeholder="Ej: Soluciones Financieras S.A.S" required />
 
         <label for="cargo">Cargo:</label>
-        <input type="text" id="cargo" name="cargo" placeholder="Ej: Desarrolladora Junior" required />
+        <input type="text" id="cargo" name="cargo" placeholder="Ej: Analista de Software" required />
 
         <label for="ingresos">Ingresos mensuales:</label>
-        <input type="number" id="ingresos" name="ingresos" placeholder="Ej: 1800000" required />
+        <input type="number" id="ingresos" name="ingresos" placeholder="Ej: 2500000" required />
       </fieldset>
 
       <!-- BOTONES -->
-      <div class="botones-formulario">
-        <button type="submit">Enviar Solicitud</button>
-        <button type="reset">Limpiar Formulario</button>
+      <div class="form-buttons">
+        <button type="submit" class="btn-primary">Enviar Solicitud</button>
+        <button type="reset" class="btn-primary" style="background-color: #ccc; color: #000;">Limpiar Formulario</button>
       </div>
-
     </form>
   </main>
 
-  <!-- PIE DE PÁGINA -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Ingeniería Web Soluciones S.A.S</p>
-      <p>Contacto: info@creditsmart.com</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h5>CreditSmart</h5>
+        <p>Tu aliado confiable para encontrar el crédito ideal.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Enlaces útiles</h5>
+        <a href="#">Política de privacidad</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contáctanos</h5>
+        <p>📍 Villanueva, Colombia</p>
+        <p>📞 +57 300 452 7597</p>
+        <p>📧 contacto@creditsmart.co</p>
+      </div>
     </div>
   </footer>
 

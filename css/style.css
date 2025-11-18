@@ -1,335 +1,352 @@
-/* ====== RESET ====== */
+/* RESET BÁSICO */
+/* Elimina márgenes y rellenos por defecto, y ajusta el modelo de caja */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ESTILO GENERAL DEL CUERPO */
+/* Fuente principal, color de texto y fondo */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f9fafb;
-  color: #111;
+  font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-/* ====== CONTENEDOR ====== */
+/* CONTENEDOR GENERAL */
+/* Centra el contenido y limita el ancho máximo */
 .container {
-  max-width: 1100px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
-  padding: 20px;
 }
 
-/* ====== NAVBAR ====== */
+/* NAVEGACIÓN SUPERIOR */
+/* Fondo azul oscuro, texto blanco, espaciado */
 .navbar {
-  background: #fa8072;
-  color: #060606;
-  padding: 15px 20px;
+  background-color: #004080;
+  color: #fff;
+  padding: 1rem 0;
 }
 
+/* LOGO DEL MENÚ */
+/* Alinea el ícono y el texto del logo */
 .navbar .logo {
-  font-size: 1.4rem;
-  font-weight: bold;
   display: flex;
   align-items: center;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.menu a:hover,
-.menu a[aria-current="page"] {
-  background: #1e293b;
-}
-
-/* ====== HERO ====== */
-.hero {
-  background: linear-gradient(135deg, #1e293b, #0f172a);
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  color: #e5e7eb;
-}
-
-/* ====== CATÁLOGO ====== */
-.section h3 {
-  margin-bottom: 20px;
-  font-size: 1.6rem;
-  color: #0f172a;
-}
-
-.credits-grid,
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-/* ====== TARJETAS DE CRÉDITO (comunes) ====== */
-.credit-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.2s;
-}
-
-.credit-card:hover {
-  transform: translateY(-4px);
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.card-header h4,
-.credit-card h4 {
-  font-size: 1.2rem;
-  color: #0f172a;
-}
-
-.credit-card p {
-  margin: 6px 0;
-  font-size: 0.95rem;
-}
-
-.credit-card .icon {
-  font-size: 1.6rem;
-}
-
-.details {
-  margin: 15px 0;
-}
-
-.detail-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px 0;
-  font-size: 0.95rem;
-}
-
-.detail-item .label {
-  color: #374151;
-}
-
-.detail-item .value {
-  font-weight: bold;
-  color: #0f172a;
-}
-
-/* Botón dentro de tarjetas (simulador) */
-.credit-card .btn {
-  display: inline-block;
-  margin-top: 10px;
-  background: #0ea5e9;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.credit-card .btn:hover {
-  background: #0284c7;
-}
-
-/* ====== BOTONES GENERALES ====== */
-.btn-primary {
-  display: inline-block;
-  background: #22c55e;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background: #16a34a;
-}
-
-.btn-secondary {
-  background: #0ea5e9;
-  color: #fff;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn-secondary:hover {
-  background: #0284c7;
-}
-
-/* ====== FOOTER ====== */
-.footer {
-  background: #0f172a;
-  color: #fff;
-  padding: 30px 20px;
-  margin-top: 40px;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.footer h5 {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.footer a {
-  color: #22c55e;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* ====== FORMULARIOS GENERALES ====== */
-form {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 20px;
-}
-
-form label {
-  display: block;
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-top: 6px;
-  font-size: 0.95rem;
-}
-
-form button {
-  margin-top: 10px;
-}
-
-/* ====== FORMULARIO SIMULADOR ====== */
-.simulador-section {
-  margin-bottom: 30px;
-}
-
-.simulador-form {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 20px;
-  display: grid;
-  gap: 16px;
-}
-
-.simulador-form label {
-  font-weight: 500;
-  color: #0f172a;
-}
-
-/* ====== FORMULARIO SOLICITUD ====== */
-.formulario-solicitud {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 20px;
-  display: grid;
-  gap: 20px;
-}
-
-.formulario-solicitud fieldset {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 15px;
-}
-
-.formulario-solicitud legend {
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 10px;
-}
-
-.botones-formulario {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-/* ====== RESPONSIVE ====== */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero h2 {
-    font-size: 1.6rem;
-  }
-
-  .credits-grid,
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .simulador-form {
-    grid-template-columns: 1fr;
-  }
-
-  .formulario-solicitud fieldset {
-    grid-template-columns: 1fr;
-  }
+  font-size: 1.5rem;
 }
 .navbar .container {
   display: flex;
-  justify-content: space-between; /* separa logo a la izquierda y menú a la derecha */
   align-items: center;
+  justify-content: space-between;
 }
 
 .menu {
-  display: flex;
-  gap: 20px;
-  margin-left: auto; /* empuja el menú hacia la derecha */
+  margin-left: auto; /* Empuja el menú hacia la derecha */
 }
+
+/* MENÚ DE NAVEGACIÓN */
+/* Lista horizontal con espacio entre enlaces */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* ENLACES DEL MENÚ */
+/* Color blanco, sin subrayado, negrita */
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ENLACE ACTIVO O HOVER */
+/* Subrayado para destacar */
+.menu li a:hover,
+.menu li a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* BANNER PRINCIPAL */
+/* Fondo degradado azul, texto blanco, centrado */
+.hero {
+  background: linear-gradient(to right, #0077cc, #005fa3);
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+/* TÍTULO DEL BANNER */
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* SECCIÓN DE TARJETAS DE CRÉDITO */
+.section.credits {
+  padding: 2rem 0;
+}
+
+/* GRID DE TARJETAS */
+/* Distribución responsiva con espacio entre tarjetas */
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* TARJETA INDIVIDUAL DE CRÉDITO */
+/* Fondo blanco, borde redondeado, sombra, animación */
+.credit-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+  border: 2px solid #000; /* borde negro */
+}
+
+/* EFECTO HOVER EN TARJETA */
+/* Eleva ligeramente la tarjeta al pasar el cursor */
+.credit-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ENCABEZADO DE LA TARJETA */
+/* Ícono y título centrados verticalmente */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ÍCONO DE LA TARJETA */
+.card-header .icon {
+  font-size: 2rem;
+}
+
+/* TÍTULO DE LA TARJETA */
+.card-header h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* DETALLES DE LA TARJETA */
+/* Espaciado interno */
+.details {
+  margin: 1rem 0;
+}
+
+/* FILA DE DETALLE (etiqueta y valor) */
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+/* ETIQUETA DEL DETALLE */
+.label {
+  font-weight: 600;
+  color: #555;
+}
+
+/* VALOR DEL DETALLE */
+.value {
+  color: #0077cc;
+}
+
+/* BOTÓN PRINCIPAL */
+/* Estilo del botón “Solicitar ahora” */
+.btn-primary {
+  display: inline-block;
+  background-color: #0077cc;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* EFECTO HOVER EN BOTÓN */
+.btn-primary:hover {
+  background-color: #005fa3;
+}
+
+/* CENTRAR BOTÓN EN TARJETA */
 .credit-card .btn-primary {
-  display: block;        /* convierte el botón en bloque */
-  margin: 12px auto 0;   /* margen superior y centrado automático */
-  text-align: center;    /* asegura que el texto del botón esté centrado */
+  display: block;
+  margin: 1rem auto 0 auto;
+  text-align: center;
+}
+
+/* PIE DE PÁGINA */
+.footer {
+  background-color: #004080;
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+/* CONTENEDOR DEL FOOTER */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* TÍTULO DE COLUMNA EN FOOTER */
+.footer-col h5 {
+  margin-bottom: 0.8rem;
+}
+
+/* ENLACES DEL FOOTER */
+.footer-col a {
+  color: #cce6ff;
+  text-decoration: none;
+}
+
+/* EFECTO HOVER EN ENLACES DEL FOOTER */
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE PARA MÓVILES */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* FORMULARIO DE SOLICITUD DE CRÉDITO */
+.credit-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+/* GRUPOS DE CAMPOS */
+.credit-form fieldset {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+/* TÍTULO DE CADA GRUPO */
+.credit-form legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #004080;
+}
+
+/* ETIQUETAS DE CAMPOS */
+.credit-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* CAMPOS DE ENTRADA */
+.credit-form input,
+.credit-form select,
+.credit-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* BOTONES DEL FORMULARIO */
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+/* FILTROS DEL SIMULADOR */
+.filter-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* GRUPO DE FILTRO */
+.filter-form .form-group {
+  flex: 1 1 300px;
+}
+
+/* ETIQUETAS DE FILTRO */
+.filter-form label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #004080;
+}
+
+/* CAMPOS DE FILTRO */
+.filter-form input,
+.filter-form select {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+/* BOTÓN DE FILTRAR */
+.filter-form .btn-primary {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* EFECTO HOVER EN BOTÓN DE FILTRAR */
+.filter-form .btn-primary:hover {
+  background-color: #005fa3;
+}
+
+/* TÍTULO DE SECCIÓN */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004080;
+  text-align: left;
+  margin-bottom: 1.5rem;
 }
