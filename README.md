@@ -42,10 +42,10 @@ CreditSmart/
 ![Inicio](/Img/Inicio.png)
 
 ### Simulador de créditos
-![Simulador](Img/simulador.png)
+![Simulador](Img/Simulador.png)
 
 ### Formulario de solicitud
-![Formulario](Img/solicitar.png)
+![Formulario](Img/Solicitar.png)
 
 ---
 
